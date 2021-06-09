@@ -6,7 +6,7 @@
 const mensaje = alert('Un mensaje');
 
 //2. HECHO - Escribe un programa de una sola línea que escriba en la pantalla un texto que diga «Hello World» (document.write).
-const holaMundo = document.write('Hello World '); 
+const holaMundo = document.write('Hello World ');
 
 //3. HECHO - Escribe un programa de una sola línea que escriba en la pantalla el resultado de sumar 3 + 5.
 const suma = document.write(3 + 5)
@@ -26,9 +26,9 @@ document.write(primerNumero + segundoNumero)
 let numeroPrimero = parseInt(prompt('Ingrese un numero'));
 let numeroSegundo = parseInt(prompt('Ingrese un numero'));
 
-if(numeroPrimero > numeroSegundo){
+if (numeroPrimero > numeroSegundo) {
     console.log(numeroPrimero + ' es mayor que ' + numeroSegundo);
-}else{
+} else {
     console.log(numeroSegundo + ' es mayor que ' + numeroPrimero);
 }
 
@@ -37,16 +37,61 @@ let firstNumber = parseInt(prompt('Ingrese un numero'));
 let secondNumber = parseInt(prompt('Ingrese un numero'));
 let thirdNumber = parseInt(prompt('Ingrese un numero'));
 
-if(firstNumber > secondNumber && firstNumber > thirdNumber){
+if (firstNumber > secondNumber && firstNumber > thirdNumber) {
     console.log(firstNumber + ' is the biggest');
-} else if(secondNumber > firstNumber && secondNumber > thirdNumber){
+} else if (secondNumber > firstNumber && secondNumber > thirdNumber) {
     console.log(secondNumber + ' is the biggest');
 } else {
     console.log(thirdNumber + ' is the biggest');
 }
 
 //8.- Escribe un programa que pida un número y diga si es divisible por 2 
+let number = parseInt(prompt('Ingrese un numero'));
+
+if (number % 2 === 0) {
+    console.log(number + ' es divisible en 2');
+} else {
+    console.log(number + ' no es divisible en 2');
+}
+
 //9.- Escribe un programa que pida una frase y escriba las vocales que aparecen
 //Nota: Tener en cuenta la función length y substr. (developer mozilla)
+let sentence = prompt('Ingrese una oracion');
+let sentenceLength = sentence.length;
+
+for (i = 0; i < sentenceLength; i++) {
+    if (sentence.substr(i, 1) === "a" || sentence.substr(i, 1) === "e" || sentence.substr(i, 1) === "i" || sentence.substr(i, 1) === "o" || sentence.substr(i, 1) === "u") {
+        console.log(sentence.substr(i, 1));
+    }
+}
+
 //10.- Escribe un programa que pida un número y nos diga si es divisible por 2, 3, 5 o 7 (sólo hay que comprobar si lo es por uno de los cuatro) 
+let numberFirst = parseInt(prompt('Ingrese un numero'));
+
+if (numberFirst % 2 === 0 || numberFirst % 3 === 0 || numberFirst % 5 === 0 || numberFirst % 7 === 0) {
+    console.log(numberFirst + ' es divisible en 2, 3, 5 o 7');
+} else {
+    console.log(numberFirst + ' no es divisible en 2, 3, 5 o 7');
+}
+
 //11.- Añadir al ejercicio anterior que nos diga por cuál de los cuatro es divisible (hay que decir todos por los que es divisible)
+let n1 = parceInt(prompt("Escribe un número"));
+
+if (n1 % 2 === 0 || n1 % 3 === 0 || n1 % 5 === 0 || n1 % 7 === 0) {
+    if (n1 % 2 === 0) {
+        console.log("Es divisible por 2. ");
+    }
+    if (n1 % 3 === 0) {
+        console.log("Es divisible por 3. ");
+    }
+    if (n1 % 5 === 0) {
+        console.log("Es divisible por 5. ");
+    }
+    if (n1 % 7 === 0) {
+        console.log("Es divisible por 7. ");
+    }
+} else {
+    console.log("No es divisible ni por 2, ni por 3, ni por 5, ni por 7");
+}
+
+
